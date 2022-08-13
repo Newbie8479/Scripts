@@ -66,7 +66,6 @@ function AntiFling()
 							for i,v in ipairs(Character:GetChildren()) do
 								if v:IsA("BasePart") then
 									v.CanCollide = false
-									v.Transparency = 0.05
 									v.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
 									v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
 									v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0)
@@ -77,7 +76,6 @@ function AntiFling()
 							for i,v in ipairs(Character:GetChildren()) do
 								if v:IsA("BasePart") then
 									v.CanCollide = false
-									v.Transparency = 0.05
 									v.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
 									v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
 									v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0)
@@ -85,6 +83,7 @@ function AntiFling()
 							end
 						end
 					end
+					--[[
 					if Character:FindFirstChild("Humanoid") then
 						if Character.Humanoid.SeatPart then
 							local SeatPart = Character.Humanoid.SeatPart
@@ -92,7 +91,7 @@ function AntiFling()
 								for _, v in pairs(SeatPart:FindFirstAncestorOfClass("Model"):GetDescendants()) do
 									if v:IsA("BasePart") then
 										v.CanCollide = false
-										v.Transparency = 0.05
+										v.Transparency = 0.5
 									end
 								end
 							end
@@ -100,11 +99,11 @@ function AntiFling()
 					else
 						return
 					end
+					]]
 					for i,v in ipairs(Character:GetChildren()) do
 						if v:IsA("BasePart") then
 							if v.AssemblyAngularVelocity.Magnitude > 50 or v.AssemblyLinearVelocity.Magnitude > 100 then
 								v.CanCollide = false
-								v.Transparency = 0.05
 								v.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
 								v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
 								v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0)
@@ -121,7 +120,6 @@ function AntiFling()
 						if Character.Humanoid.Health == 0 then
 							if v:IsA("BasePart") then
 								v.CanCollide = false
-								v.Transparency = 0.05
 								v.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
 								v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
 								v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0)
