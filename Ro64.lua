@@ -170,6 +170,7 @@ function AntiFling()
 	end)
 end
 
+
 setting:addButton("스핀핵 방지 재실행", function()
 	spawn(AntiFling)
 end)
