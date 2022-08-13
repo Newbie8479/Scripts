@@ -6,7 +6,7 @@ local RunService = game:GetService("RunService")
 local Player = game.Players.LocalPlayer
 
 -- 스크린
-local Version = "1.4"
+local Version = "1.1"
 
 local venyx = library.new("Ro64", 6031302916)
 local page = venyx:addPage("메인 스크립트", 6031082525)
@@ -24,8 +24,6 @@ end)
 editer:addButton("스크립트 제작자:Newbie0823")
 editer:addButton("버전:"..Version)
 editer:addButton("UI라이브러리:venyx-ui-lib-modified")
-
-updata:addButton("안티-fling 수정")
 
 function AntiFling()
 	local Services = setmetatable({}, {__index = function(Self, Index)
@@ -171,6 +169,10 @@ function AntiFling()
 		end)
 	end)
 end
+
+updata:addButton("스핀핵 방지 재실행", function()
+	spawn(AntiFling)
+end)
 
 local loadscript = {
 	[5720801512] = {
