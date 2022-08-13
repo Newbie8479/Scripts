@@ -170,7 +170,7 @@ function AntiFling()
 	end)
 end
 
-updata:addButton("스핀핵 방지 재실행", function()
+setting:addButton("스핀핵 방지 재실행", function()
 	spawn(AntiFling)
 end)
 
