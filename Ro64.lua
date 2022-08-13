@@ -21,7 +21,7 @@ setting:addKeybind("창 토글", Enum.KeyCode.F1, function()
 	venyx:toggle()
 end)
 
-editer:addButton("스크립트 제작자:Newbie0823")
+editer:addButton("스크립트 제작자:Newbie0823#5903")
 editer:addButton("버전:"..Version)
 editer:addButton("UI라이브러리:venyx-ui-lib-modified")
 
